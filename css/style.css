@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sen, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --bgcolor-dark: #181823;
+    --bgcolor-light: #5221e6;
+}
+
+
+body {
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.sidebar-left {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(2fr / (2 + 3) * 100%);
+    width: 40vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.sidebar-right {
+    background-color: var(--bgcolor-dark);
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 60vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+header {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 80px;
+}
+
+header section:nth-child(1) {
+    padding-top: 32px;
+    padding-left: 64px;
+}
+
+header section:nth-child(2) {
+    background-color: transparent;
+    padding-top: 10px;
+}
+
+
+header nav a {
+    color: white;    
+}
+
+header nav > a {
+    font-weight: 600;
+    font-size: 120%;
+    padding-right: 24px;
+}
+
+header nav {
+    text-align: right;
+    padding-right: 32px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    font-weight: 400;
+    font-size: 80%;
+}
+
+header nav ul li {
+    padding: 30px 24px;
+}
+
+header nav ul li.contoct-active {
+    background-color: var(--bgcolor-light) !important;
+}
+header nav ul li:hover {
+    background-color: var(--bgcolor-light);
+}
+
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+  
+}
+
+.imag {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+.н, .у {
+    position: absolute;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    transform: translateX(700px);
+}
+
+.н {
+    position: absolute;
+    top: 20%;
+    transform: translateX(700px);
+    width: 90%;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    font-size: 65px;
+    font-weight: 800;
+}
+
+.у {
+    position: absolute;
+    top: 65%;
+    transform: translateX(700px);
+    width: 99%;
+    color: #ddd;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+}
+
